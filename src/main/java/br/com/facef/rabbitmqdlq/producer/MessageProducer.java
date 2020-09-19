@@ -18,7 +18,7 @@ public class MessageProducer {
 
     public void sendFakeMessage() {
         log.info("Sending a fake message...");
-        this.rabbitTemplate.convertAndSend(
+        rabbitTemplate.convertAndSend(
                 DIRECT_EXCHANGE_NAME,
                 ORDER_MESSAGES_QUEUE_NAME,
                 "FAKE-MESSAGE-"
